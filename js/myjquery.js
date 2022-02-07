@@ -42,7 +42,7 @@
         }
         if( winWidth>1200 && sct===0 && !$('html').hasClass('pc')){
             $('.nav').css({right: '0'})
-            $('.header-outer .nav').css({lineHeight: '70px'})
+            $('.header-outer .nav').css({lineHeight: '90px'})
             $('.nav li').eq(0).addClass('focus')
             common()
             $('html').addClass('pc').removeClass('mobile tablet')
@@ -54,7 +54,7 @@
             common()
         } else if( winWidth>800 && winWidth<=1200 && sct===0 && !$('html').hasClass('tablet')){
             $('.nav').css({right: '10px'})
-            $('.header-outer .nav').css({lineHeight: '70px'})
+            $('.header-outer .nav').css({lineHeight: '90px'})
             $('.nav li').eq(0).addClass('focus')
             $('html').addClass('tablet').removeClass('pc mobile')
             common()
@@ -69,7 +69,7 @@
             $('.intro-box').removeClass('row')
             $('.nav').css({
                 display: 'none',
-                right: '-55%'
+                right: '-55%',
             })
             $('html').addClass('mobile').removeClass('pc tablet')
         }
@@ -205,7 +205,7 @@
                 color: '#a1a1a1'
             }, 500)
             $('.header-outer .nav').stop().animate({
-                lineHeight: '70px'
+                lineHeight: '50px'
             }, 500)
             $('.open-gnb').stop().animate({
                 top: '21px'
@@ -221,16 +221,16 @@
             }, 150)
             $('.header-outer h1').stop().animate({
                 color: '#fff',
-                height: '70px'
+                height: '90px'
             }, 750)
             $('.header-outer h1 a').stop().animate({
-                lineHeight: '70px'
+                lineHeight: '90px'
             }, 750)
             $('.header-outer h1 span').stop().animate({
                 color: '#fff'
             }, 750)
             $('.header-outer .nav').stop().animate({
-                lineHeight: '70px'
+                lineHeight: '90px'
             }, 750)
             $('.prev-arrow').stop().animate({opacity: '0'}, 500)
             $('.next-arrow').stop().animate({opacity: '1'}, 500)
@@ -240,16 +240,16 @@
             }, 150)
             $('.header-outer h1').stop().animate({
                 color: '#fff',
-                height: '70px'
+                height: '90px'
             }, 750)
             $('.header-outer h1 a').stop().animate({
-                lineHeight: '70px'
+                lineHeight: '90px'
             }, 750)
             $('.header-outer h1 span').stop().animate({
                 color: '#fff'
             }, 750)
             $('.header-outer .nav').stop().animate({
-                lineHeight: '70px'
+                lineHeight: '50px'
             }, 750)
             $('.open-gnb').stop().animate({
                 top: '15px'
@@ -262,17 +262,19 @@
 
     // 마우스휠
     $('section').on('mousewheel', function(e, wh){
-        prev = $(this).prev().offset().top
-        next = $(this).next().offset().top
-        if(!$('.popup-wrap').hasClass('on')){
-            if (wh < 0 && winWidth > 800){
-                $('html, body').stop().animate({scrollTop: next}, 800, 'linear')
-            }     
-            else if (sct > 0 && winWidth > 800){
-                $('html, body').stop().animate({scrollTop: prev}, 800, 'linear')
+        if(!($('body').hasClass('modal-open'))){
+            prev = $(this).prev().offset().top
+            next = $(this).next().offset().top
+            if(!$('.popup-wrap').hasClass('on')){
+                if (wh < 0 && winWidth > 800){
+                    $('html, body').stop().animate({scrollTop: next}, 800, 'linear')
+                }     
+                else if (sct > 0 && winWidth > 800){
+                    $('html, body').stop().animate({scrollTop: prev}, 800, 'linear')
+                }
+            } else if ($('.popup-wrap').hasClass('on')){
+                e.preventDefault()
             }
-        } else if ($('.popup-wrap').hasClass('on')){
-            e.preventDefault()
         }
     })
 
@@ -321,7 +323,6 @@
         var next = $('section').eq(index).next().offset().top
         $('body, html').stop().animate({scrollTop: next}, 800)
     })
-
 
 
 })(jQuery)

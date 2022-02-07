@@ -1,10 +1,9 @@
 (function($){
 
-    // web 슬라이드 버튼
-    $('.web-btn button').on('click', function(){
-        $(this).addClass('on')
-        $(this).siblings().removeClass('on')
-        var index = $(this).index()
+    // web 이동
+    function webMove(index){
+        $('.web-btn button').eq(index).addClass('on')
+        $('.web-btn button').eq(index).siblings().removeClass('on')
         $('.webslide').eq(index).stop().animate({left: '0'}, 1000)
         if(index===0){
             $('.webslide').eq(1).stop().animate({left: '100%'}, 1000)
@@ -23,7 +22,19 @@
             $('.webslide').eq(1).stop().animate({left: '-200%'}, 1000)
             $('.webslide').eq(2).stop().animate({left: '-100%'}, 1000)
         }
+    }
+    // 숫자 버튼 클릭
+    $('.web-btn button').on('click', function(){
+        var index = $(this).index()
+        webMove(index)
     })
+    // NEXT 버튼 클릭
+    $('.next-btn').on('click', function(){
+        var index = $(this).parents('.webslide').index() + 1
+        if(index == 4) {index = 0}
+        webMove(index)
+    })
+
 
     // photoshop 팝업
     var lieq, src, alt
