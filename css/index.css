@@ -51,7 +51,7 @@ body {font-family: 'Noto Sans KR', sans-serif;}
 #intro .intro-box .txt-box h2 .bigTit2 span:nth-child(9) {animation-delay: 1.8s;}
 #intro .intro-box .txt-box h2 .bigTit2 span:nth-child(10) {animation-delay: 2.0s;}
 #intro .intro-box .txt-box .contTxt1 {position: absolute; right: 0; margin-top: 226px; color: #222; font-size: 20px; overflow: hidden; height: 30px; opacity: 0; padding-top: 30px; animation: txtUp 2s both 1.2s;}
-#intro .intro-box .txt-box .contTxt2 {position: absolute; right: 0; margin-top: 266px; color: #777; line-height: 1.2; overflow: hidden; height: 80px; opacity: 0; padding-top: 80px; animation: txtUp 2s both 1.6s;}
+#intro .intro-box .txt-box .contTxt2 {position: absolute; right: 0; margin-top: 266px; color: #777; line-height: 1.2; overflow: hidden; height: 100px; opacity: 0; padding-top: 80px; animation: txtUp 2s both 1.6s;}
 .intro-box .sprite-img {position: absolute; top: 70px;}
 .intro-box .sprite-img span {background-repeat: no-repeat; background-size: auto; display: inline-block; visibility: visible; opacity: 0; background-image: url(../images/spriteIMG.png); position: absolute; animation: float-x 10s ease infinite; width: 107px; height: 106px;}
 .sprite-img span:nth-child(1) 
@@ -72,7 +72,7 @@ section h2 {font-size: 80px; line-height: 80px; padding-top: 20px; color: #6c84f
 section svg {width: 60px; height: 10px;}
 section svg * {stroke: #6c84ff; fill: none; stroke-width: 5px;}
 h3 {font-size: 18px; color: #222; position: relative; padding-bottom: 15px; letter-spacing: -1px;}
-h3:before {content: ''; position: absolute; display: block; left: 0; top: -7px; width: 30px; height: 3px; background: #d6d6d6;}
+h3:before {content: ''; position: absolute; display: block; left: 0; top: -10px; width: 30px; height: 3px; background: #d6d6d6;}
 section .tit-box svg {margin-left: -50px; opacity: 0; animation: titLeft 1.5s both;}
 section .tit-box h2 p {margin-left: -50px; opacity: 0; animation: titLeft 1.5s both;}
 section .tit-box h2 p:last-child {animation-delay: 0.3s;}
@@ -85,15 +85,15 @@ section .tit-box h2 p:last-child {animation-delay: 0.3s;}
 #about .bg-about:after {content:''; position: absolute; background: #f5f5f5; width: 50%; height: 690px; transform: skewY(165deg); top: 170px; right: 0;}
 .about-box {position: relative; padding: 125px 0 0 60px;}
 .about-box .left-area {float: left; width: 44%;}
-.about-box .right-area {float: right; width: 56%; padding-top: 90px;}
+.about-box .right-area {float: right; width: 56%; padding-top: 80px;}
 .about-box .left-area .tit-box {margin-left: 50px;}
 .about-box .txt-box {padding: 110px 0 0 100px; position: relative; margin-left: -50px; opacity: 0; animation: titLeft 1.5s both 0.6s;}
 .about-box .txt-box:before {content: '"'; position: absolute; top: -15%; left: 0; font-size: 230px; line-height: 230px; color: #d6d6d6; font-family: 'Catamaran', sans-serif; transform: rotate(180deg);}
 .about-box .txt-box p {position: relative; font-size: 18px; color: #222;}
 .about-box .txt-box p:first-child {font-size: 30px; font-weight: bold;}
 .about-box .txt-box p:nth-child(2):before {content: ''; position: absolute; display: block; background: #ffd71f; left: 0; top: 15px; width: 9.7em; height: 0.6em; transition: all 0.5s;}
-.about-box .txt-box p strong {font-weight: bold; position: relative;}
-.about-box .txt-box p span {font-size: 40px; color: #6c84ff; line-height: 18px;}
+.about-box .txt-box p strong {font-weight: bold; position: relative; color: #871717;}
+.about-box .txt-box p span {font-size: 40px; color: #6c84ff; line-height: 18px; margin-left: 2px;}
 .about-box .txt-box p:nth-child(3) {padding: 50px 0;}
 .about-box .txt-box p:last-child {font-size: 16px; font-style: italic; text-decoration: underline; cursor: pointer;}
 .about-box .skill {padding-bottom: 110px; margin-top: 30px; opacity: 0; animation: titUp 1.5s both 0.9s;}
@@ -113,9 +113,14 @@ section .tit-box h2 p:last-child {animation-delay: 0.3s;}
 .about-box .r-box {float: left; width: 33.3333%; padding: 0 15px; margin-top: 30px; opacity: 0; animation: titUp 1.5s both 1.2s;}
 .about-box .r-box:nth-of-type(3) {animation-delay: 1.4s;}
 .about-box .r-box:nth-of-type(4) {animation-delay: 1.6s;}
+.about-box .r-box .accent {position: relative;}
+.about-box .r-box .accent:before {content: ''; position: absolute; display: block; background: #ffd71f; left: 0; top: 41px; height: 0.6em; transition: all 0.5s;}
+.about-box .r-box:nth-of-type(2) .accent:before {width: 7.7em;}
+.about-box .r-box:nth-of-type(4) .accent:before {width: 6.5em;}
 .about-box .r-box p {padding: 7px 0; color: #666; font-size: 15px;}
 .about-box .r-box span {font-size: 14px; color: #6c84ff;}
 .about-box .r-box strong {font-weight: bold;}
+.about-box .r-box .accent strong {color: #000; position: relative;}
 
 
 /* web */
@@ -130,42 +135,50 @@ section .tit-box h2 p:last-child {animation-delay: 0.3s;}
 .webslide:nth-child(2) {left: 100%;}
 .webslide:nth-child(3) {left: 200%;}
 .webslide:nth-child(4) {left: 300%;}
-.webslide .img {width: 100%; height: 300px; background-size: auto; background-repeat: no-repeat; background-position: center; position: relative; cursor: pointer;}
+.webslide .img {width: 100%; height: 300px; background-size: auto; background-repeat: no-repeat; background-position: center; position: relative;}
 .webslide .img:before {content: ''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(108,132,255,0); transition: all 0.3s;}
-.webslide .img p {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; padding: 12px 30px; background: rgba(0,0,0,.7); opacity: 0; transition: all 0.5s;}
+.webslide .img a {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; padding: 12px 30px; background: rgba(0,0,0,.7); opacity: 0; transition: all 0.5s;}
+.webslide .img a.move {transform: translate(-50%, -50%); left: calc(50% - 85px);}
+.webslide .img a.preview {transform: translate(-50%, -50%); left: calc(50% + 85px);}
+.webslide .img a.move:hover {background: rgba(135,23,23,.7);}
+.webslide .img a.preview:hover {background: rgba(135,23,23,.7);}
+.webslide:nth-child(3) .img a.move {left: 50%;}
+.webslide:nth-child(4) .img a.move {left: 50%;}
 
 
+
+.webslide .img .mTit {position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%); width: 82%; line-height: 1;padding: 28px 10px; display: none;}
+.webslide .img .mTit {position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%); width: 82%; line-height: 1;padding: 28px 10px; display: none;}
 .webslide .img .mTit {position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%); width: 82%; line-height: 1;padding: 28px 10px; display: none;}
 .webslide .img .mTit em {font-size: 1.8rem; color: #6c84ff; font-weight: bold;}
 .webslide .img .mTit h3 {font-size: 2.1rem; color: #fff; line-height: 2.6rem; padding: 12px 0;}
 .webslide .img .mTit h3:before {display: none;}
 .webslide .img .mTit span {font-size: 1rem; color: rgba(255,255,255,.8);}
 .webslide .img:hover:before {background: rgba(0,0,0,.3);}
-.webslide .img:hover p {opacity: 1;}
+.webslide .img:hover a {opacity: 1;}
 .webslide:nth-child(1) .img {background-image: url(../images/webslide1.jpg);}
 .webslide:nth-child(2) .img {background-image: url(../images/webslide2.jpg);}
 .webslide:nth-child(3) .img {background-image: url(../images/webslide3.jpg);}
 .webslide:nth-child(4) .img {background-image: url(../images/webslide4.jpg);}
 .webslide .txt-box {padding-top: 60px;}
 .webslide .txt-box > div {float: left; margin-top: 30px; opacity: 0; animation: titUp 1.5s both;}
-.webslide .txt-box .subject {width: 31%; padding-left: 47px; animation-delay: 0.9s;}
-.webslide .txt-box .intro {width: 44%; animation-delay: 1.1s;}
+.webslide .txt-box .subject {width: 33%; padding-left: 47px; animation-delay: 0.9s;}
+.webslide .txt-box .intro {width: 42%; animation-delay: 1.1s;}
 .webslide .txt-box .usetool {width: 25%; animation-delay: 1.3s;}
 .webslide .txt-box .subject h3 {font-size: 30px; color: #222;}
-.webslide .txt-box .subject h3 span {font-size: 22px; color: #6c84ff;}
+.webslide .txt-box .subject h3 span {font-size: 22px; color: #6c84ff; margin-right: 5px;}
 .webslide .txt-box .subject p {font-size: 18px; color: #222;}
 .webslide .txt-box .subject p strong {font-weight: bold;}
 .webslide .txt-box p {color: #666; font-size: 15px;}
 .webslide .txt-box span {font-size: 14px; color: #6c84ff;}
 .webslide .txt-box .usetool {position: relative;}
-.webslide .txt-box .usetool a {position: absolute; right: 2%; font-size: 15px;}
-.webslide .txt-box .usetool a > p {text-decoration: underline; width: 50px; color: #6c84ff;}
+.webslide .txt-box .usetool .next-btn {position: absolute; right: 2%; font-size: 15px; background: transparent; cursor: pointer;}
+.webslide .txt-box .usetool .next-btn p {text-decoration: underline; color: #6c84ff; font-weight: bold;}
 .webslide .txt-box .usetool .arr-box {display: inline-block; margin-left: -15px; opacity: 0; animation: gobtn 3s infinite;}
 .webslide .txt-box .usetool .arr-box span {border-top: 2px solid #6c84ff; border-left: 2px solid #6c84ff; width: 6px; height: 6px; display: inline-block; transform: rotate(135deg); margin-bottom: 2px; opacity: 0; animation: gobtn-arr 3s infinite}
 .webslide .txt-box .usetool span:nth-of-type(1) {animation-delay: 1s;}
 .webslide .txt-box .usetool span:nth-of-type(2) {animation-delay: 0.5s;}
 .webslide .txt-box .usetool span:nth-of-type(3)  {animation-delay: 0s;}
-
 
 
 /* photo */
@@ -276,12 +289,12 @@ section .tit-box h2 p:last-child {animation-delay: 0.3s;}
     100% {margin-right: 0; opacity: 1;}
 }
 /* animation */
-@keyframes htmlscore { 0% {height: 0%;} 100% {height: 80%; opacity: 1;} }
-@keyframes cssscore { 0% {height: 0%;} 100% {height: 70%; opacity: 1;} }
+@keyframes htmlscore { 0% {height: 0%;} 100% {height: 90%; opacity: 1;} }
+@keyframes cssscore { 0% {height: 0%;} 100% {height: 80%; opacity: 1;} }
 @keyframes jsjqscore { 0% {height: 0%;} 100% {height: 60%; opacity: 1;} }
 @keyframes reactscore { 0% {height: 0%;} 100% {height: 50%; opacity: 1;} }
-@keyframes psscore { 0% {height: 0%;} 100% {height: 90%; opacity: 1;} }
-@keyframes illscore { 0% {height: 0%;} 100% {height: 75%; opacity: 1;} }
+@keyframes psscore { 0% {height: 0%;} 100% {height: 80%; opacity: 1;} }
+@keyframes illscore { 0% {height: 0%;} 100% {height: 70%; opacity: 1;} }
 @keyframes letterani{
     0%, 100% {}
     50% {margin-top: -40px;}
