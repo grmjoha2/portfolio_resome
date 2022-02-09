@@ -71,7 +71,7 @@
     .about-box .skill li .score {width: 32px;}
     .about-box .r-box {width: 100%; padding: 50px 30px 0; text-align: center;}
     .about-box .r-box.work {padding: 0px 10px;}
-    .about-box .r-box:nth-of-type(4) .accent:before {display: none;}
+    .about-box .r-box:nth-of-type(4) .accent:before, .about-box .r-box:nth-of-type(2) .accent:before {display: none;}
     .web-box .tit-box {padding: 0; position: relative;}
     .web-box .web-btn {padding-top: 50px;}
     .web-box .webslide-box {height: 860px; text-align: center;}
